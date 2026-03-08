@@ -1,10 +1,332 @@
 ﻿@page
 @model IndexModel
 @{
-    ViewData["Title"] = "Home page";
+    ViewData["Title"] = "Home";
 }
 
-<div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://learn.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
-</div>
+<!-- HERO (wide + ready for background image) -->
+<section class="hero-academic d-flex align-items-center border-bottom">
+    <div class="container-fluid px-0">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-12 col-xl-10">
+                    <div class="text-center py-5 py-lg-6">
+                        <h1 class="hero-title mb-3">CAS–ANSO Conference</h1>
+
+                        <p class="hero-subtitle mb-4 mx-auto" style="max-width: 52rem;">
+                            A scientific conference dedicated to research exchange, interdisciplinary dialogue,
+                            and international cooperation.
+                        </p>
+
+                        <div class="d-flex justify-content-center gap-2 flex-wrap">
+                            <a class="btn btn-outline-dark btn-lg" asp-page="/Conference/Program">Program</a>
+                            <a class="btn btn-dark btn-lg" asp-page="/Conference/Registration">Registration</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="hero-overlay"></div>
+</section>
+
+<!-- OVERVIEW + THEMES (academic, centered headings, no boxes for text) -->
+<section class="py-5 bg-white">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-12 col-xl-10">
+
+                <!-- Centered heading -->
+                <header class="text-center mb-4">
+                    <h2 class="h3 fw-semibold mb-2">Conference overview</h2>
+                    <p class="text-secondary mb-0">
+                        The CAS–ANSO Conference provides a platform for rigorous scientific exchange and interdisciplinary dialogue.
+                    </p>
+                </header>
+
+                <!-- Objectives (no card) -->
+                <div class="overview-block">
+                    <h3 class="h4 fw-semibold mb-2">Objectives</h3>
+                    <p class="text-secondary mb-2">
+                        The conference aims to disseminate recent research results, encourage constructive debate,
+                        and strengthen collaboration among institutions and research groups.
+                    </p>
+                    <ul class="text-secondary mb-0">
+                        <li>Present and discuss peer-level scientific contributions.</li>
+                        <li>Support early-career researchers through visibility and feedback.</li>
+                        <li>Stimulate interdisciplinary cooperation and new partnerships.</li>
+                        <li>Encourage high standards in methodology and scientific communication.</li>
+                    </ul>
+                </div>
+
+                <!-- Relevance (no card) -->
+                <div class="overview-block">
+                    <h3 class="h4 fw-semibold mb-2">Relevance</h3>
+                    <p class="text-secondary mb-2">
+                        By connecting researchers across domains, the conference strengthens scientific networks
+                        and aligns ongoing work with international priorities and collaboration opportunities.
+                    </p>
+                    <ul class="text-secondary mb-0">
+                        <li>Enhances visibility of research outcomes and institutional profiles.</li>
+                        <li>Bridges fundamental research with applied perspectives and societal needs.</li>
+                        <li>Creates pathways to joint publications, projects, and mobility.</li>
+                        <li>Supports knowledge exchange in a structured academic setting.</li>
+                    </ul>
+                </div>
+
+                <hr class="my-5" />
+
+                <!-- Centered themes heading -->
+                <header class="text-center mb-4">
+                    <h2 class="h3 fw-semibold mb-2">Themes</h2>
+                    <p class="text-secondary mb-0">
+                        The conference program is organized around the following thematic areas.
+                    </p>
+                </header>
+
+                <!-- Themes grid -->
+                <div class="row g-3">
+                    <div class="col-12 col-md-6 col-lg-4">
+                        <div class="theme-card p-5 border rounded-3 h-100 text-center d-flex flex-column justify-content-center">
+                            <div class="theme-title">Sustainable Energy Conversion</div>
+                            <div class="text-secondary mt-1">insert description when you have it</div>
+                        </div>
+                    </div>
+
+                    <div class="col-12 col-md-6 col-lg-4">
+                        <div class="theme-card p-5 border rounded-3 h-100 text-center d-flex flex-column justify-content-center">
+                            <div class="theme-title">Advanced Materials for Sustainability</div>
+                            <div class="text-secondary mt-1">insert description when you have it</div>
+                        </div>
+                    </div>
+
+                    <div class="col-12 col-md-6 col-lg-4">
+                        <div class="theme-card p-5 border rounded-3 h-100 text-center d-flex flex-column justify-content-center">
+                            <div class="theme-title">Molecular Design and Resilience</div>
+                            <div class="text-secondary mt-1">insert description when you have it</div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</section>
+
+<style>
+    /* Spacing between Objectives/Relevance blocks */
+    .overview-block {
+        padding: 0;
+        margin-top: 1.25rem;
+    }
+
+    /* Make theme titles more visible */
+    .theme-card {
+        background: #fff;
+        transition: transform 160ms ease, box-shadow 160ms ease;
+    }
+
+    .theme-title {
+        font-weight: 700;
+        font-size: 1.05rem;
+        line-height: 1.25;
+        color: #111;
+    }
+
+    .theme-card:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 .5rem 1.25rem rgba(0,0,0,.08);
+    }
+</style>
+
+<style>
+    .theme-card {
+        background: #fff;
+        transition: transform 160ms ease, box-shadow 160ms ease;
+    }
+
+        .theme-card:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 .5rem 1.25rem rgba(0,0,0,.08);
+        }
+</style>
+
+<script>
+    // "+" becomes "–" when expanded (for both boxes)
+    document.addEventListener("DOMContentLoaded", () => {
+        const pairs = [
+            { collapseId: "collapseObjectives" },
+            { collapseId: "collapseRelevance" }
+        ];
+
+        pairs.forEach(({ collapseId }) => {
+            const el = document.getElementById(collapseId);
+            if (!el) return;
+
+            const btn = document.querySelector(`[data-bs-target="#${collapseId}"]`);
+            const icon = btn?.querySelector(".toggle-icon");
+            if (!btn || !icon) return;
+
+            el.addEventListener("show.bs.collapse", () => icon.textContent = "–");
+            el.addEventListener("hide.bs.collapse", () => icon.textContent = "+");
+        });
+    });
+</script>
+
+<style>
+    /* HERO: pregătit pentru imagine de fundal */
+    .hero-academic {
+        position: relative;
+        min-height: 60vh;
+        background-image: url('/img/Title-trial-photo.jpg'); /* dacă ai setat-o */
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+    }
+
+    /* Overlay mai discret (mai puțin alb) */
+    .hero-overlay {
+        position: absolute;
+        inset: 0;
+        background: linear-gradient( to bottom, rgba(255,255,255,0.55), rgba(255,255,255,0.70) );
+        pointer-events: none;
+        display: block;
+    }
+
+    /* Textul deasupra overlay-ului */
+    .hero-academic .container {
+        position: relative;
+        z-index: 1;
+    }
+</style>
+
+<section class="py-5 bg-white">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-12 col-xl-10">
+
+                <header class="text-center mb-4">
+                    <h2 class="h3 fw-semibold mb-2">Hosts &amp; Partners</h2>
+                    <p class="text-secondary mb-0">
+                        Institutions contributing to the organization and delivery of the conference.
+                    </p>
+                </header>
+
+                <div class="row g-3 justify-content-center">
+                    <!-- Romanian Academy -->
+                    <div class="col-12 col-md-6 col-lg-6">
+                        <div class="org-card h-100">
+                            <div class="org-logo">
+                                <img src="/img/logos/academy-removebg-preview.png" alt="Romanian Academy logo" />
+                            </div>
+                            <div class="org-name">Romanian Academy</div>
+                            <div class="org-role">
+                                Primary organizer
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- ICF -->
+                    <div class="col-12 col-md-6 col-lg-6">
+                        <div class="org-card h-100">
+                            <div class="org-logo">
+                                <img src="/img/logos/logo_icf_en-removebg-preview.png" alt="Institute of Physical Chemistry “Ilie Murgulescu” (ICF) logo" />
+                            </div>
+                            <div class="org-name">ICF (“Ilie Murgulescu”)</div>
+                            <div class="org-role">
+                                Primary organizer
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- SASA -->
+                    <div class="col-12 col-md-6 col-lg-6">
+                        <div class="org-card h-100">
+                            <div class="org-logo">
+                                <img src="/img/logos/sasa.png" alt="SASA logo" />
+                            </div>
+                            <div class="org-name">SASA</div>
+                            <div class="org-role">
+                                Co-host · Program contribution · Session moderation
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- ANSO -->
+                    <div class="col-12 col-md-6 col-lg-6">
+                        <div class="org-card h-100">
+                            <div class="org-logo">
+                                <img src="/img/logos/anso-nobg.png" alt="ANSO logo" />
+                            </div>
+                            <div class="org-name">ANSO</div>
+                            <div class="org-role">
+                                Strategic partner · Support
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <hr class="my-5" />
+
+                <header class="text-center mb-3">
+                    <h2 class="h4 fw-semibold mb-1">Sponsors</h2>
+                    <p class="text-secondary mb-0">TBD</p>
+                </header>
+
+            </div>
+        </div>
+    </div>
+</section>
+
+<style>
+    .org-card {
+        background: #fff;
+        border: 1px solid rgba(0,0,0,.10);
+        border-radius: 16px;
+        padding: 28px 24px;
+        min-height: 300px;
+        text-align: center;
+        box-shadow: 0 .35rem 1rem rgba(0,0,0,.05);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        transition: transform 160ms ease, box-shadow 160ms ease;
+    }
+
+        .org-card:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 .6rem 1.4rem rgba(0,0,0,.08);
+        }
+
+    .org-logo {
+        height: 130px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-bottom: 18px;
+    }
+
+        .org-logo img {
+            max-width: 300px;
+            max-height: 150px;
+            width: auto;
+            height: auto;
+            object-fit: contain;
+            display: block;
+        }
+
+    .org-name {
+        font-weight: 750;
+        font-size: 1.15rem;
+        color: #111;
+        margin-bottom: 8px;
+    }
+
+    .org-role {
+        color: #5b5b5b;
+        font-size: 1rem;
+        line-height: 1.45;
+    }
+</style>
