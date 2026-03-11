@@ -3,40 +3,103 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>@ViewData["Title"] - ConferenceSite</title>
+    <title>@ViewData["Title"] - CAS-ANSO Conference</title>
     <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
     <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
     <link rel="stylesheet" href="~/ConferenceSite.styles.css" asp-append-version="true" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
 </head>
 <body>
     <header>
-        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
-            <div class="container">
-                <a class="navbar-brand" asp-area="" asp-page="/Index">ConferenceSite</a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target=".navbar-collapse" aria-controls="navbarSupportedContent"
-                        aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
+        <nav class="navbar navbar-expand-lg fixed-top conference-navbar">
+            <div class="container conference-navbar-inner">
+                <a class="conference-mobile-brand" asp-area="" asp-page="/Index">
+                    CAS-ANSO
+                </a>
+
+                <button class="navbar-toggler conference-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav"
+                        aria-controls="mainNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="conference-toggler-icon">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </span>
                 </button>
-                <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
-                    <ul class="navbar-nav flex-grow-1">
+
+                <div class="collapse navbar-collapse justify-content-center" id="mainNav">
+                    <ul class="navbar-nav align-items-lg-center">
                         <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-page="/Index">Home</a>
+                            <a class="nav-link conference-link" asp-area="" asp-page="/Index">Home</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-page="/Privacy">Privacy</a>
+                            <a class="nav-link conference-link" asp-area="" asp-page="/Conference/Program">Program</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link conference-link" asp-area="" asp-page="/Conference/Speakers">Speakers</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link conference-link" asp-area="" asp-page="/Conference/ROMPHYSCHEMPosters">ROMPHYSCHEM Posters</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link conference-link" asp-area="" asp-page="/Conference/Registration">Registration</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link conference-link" asp-area="" asp-page="/Conference/Committee">Committee</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link conference-link" asp-area="" asp-page="/Conference/Contact">Contact</a>
                         </li>
                     </ul>
                 </div>
             </div>
         </nav>
     </header>
-    <main role="main" class="pb-3">
+
+    <main role="main">
         @RenderBody()
     </main>
 
-    <footer class="border-top footer text-muted">
-        <div class="container">
-            &copy; 2026 - ConferenceSite - <a asp-area="" asp-page="/Privacy">Privacy</a>
+    <footer class="conference-footer">
+        <div class="container conference-footer-container">
+            <div class="row gy-4">
+                <div class="col-12 col-lg-8">
+                    <div class="conference-footer-title">CAS-ANSO Conference</div>
+
+                    <div class="conference-footer-item">
+                        <span class="conference-footer-icon">○</span>
+                        <span>International scientific conference on research exchange and cooperation</span>
+                    </div>
+
+                    <div class="conference-footer-item">
+                        <span class="conference-footer-icon">■</span>
+                        <span>7–11 June 2026</span>
+                    </div>
+
+                    <div class="conference-footer-item">
+                        <span class="conference-footer-icon">✦</span>
+                        <span>Romanian Academy &amp; ICF “Ilie Murgulescu”, Bucharest, Romania</span>
+                    </div>
+
+                    <div class="conference-footer-links mt-4">
+                        <a asp-area="" asp-page="/Privacy" class="conference-footer-link">Privacy Policy</a>
+                    </div>
+                </div>
+
+                <div class="col-12 col-lg-4">
+                    <div class="conference-footer-subtitle">Contacts</div>
+
+                    <div class="conference-footer-text">
+                        <strong>Email:</strong> contact@cas-anso-conference.ro
+                    </div>
+
+                    <div class="conference-footer-text">
+                        <a href="https://www.facebook.com/profile.php?id=100083034806170" target="_blank" class="conference-footer-social">
+                            <i class="bi bi-facebook conference-social-icon"></i>
+                            <span>ICF Facebook page</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
         </div>
     </footer>
 

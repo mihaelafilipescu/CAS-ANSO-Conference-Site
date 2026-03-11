@@ -8,6 +8,11 @@ html {
   }
 }
 
+:root {
+    --conference-blue: #2D3C59;
+    --cinference-gold: #E5BA41;
+}
+
 .btn:focus, .btn:active:focus, .btn-link.nav-link:focus, .form-control:focus, .form-check-input:focus {
   box-shadow: 0 0 0 0.1rem white, 0 0 0 0.25rem #258cfb;
 }
@@ -19,4 +24,337 @@ html {
 
 body {
   margin-bottom: 60px;
+}
+
+:root {
+    --conference-blue: #1f4e8c;
+    --conference-gold: #d9b44a;
+}
+
+.conference-navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    min-height: 96px;
+    background: var(--conference-gold);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+    box-shadow: 0 0.2rem 0.9rem rgba(0, 0, 0, 0.08);
+    z-index: 1030;
+    padding-top: 0.85rem;
+    padding-bottom: 0.85rem;
+}
+
+.conference-navbar-inner {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.conference-mobile-brand {
+    display: none;
+    font-size: 1.15rem;
+    font-weight: 700;
+    color: var(--conference-blue);
+    text-decoration: none;
+    letter-spacing: 0.2px;
+}
+
+    .conference-mobile-brand:hover {
+        color: var(--conference-blue);
+        text-decoration: none;
+    }
+
+.conference-navbar .navbar-nav {
+    gap: 0.4rem;
+}
+
+.conference-link {
+    font-weight: 600;
+    font-size: 1.3rem;
+    color: var(--conference-blue) !important;
+    padding: 0.65rem 0.95rem !important;
+    transition: color 160ms ease, opacity 160ms ease;
+}
+
+    .conference-link:hover {
+        color: #163a69 !important;
+        opacity: 1;
+    }
+
+.conference-toggler {
+    border: 1px solid rgba(31, 78, 140, 0.35);
+    padding: 0.45rem 0.55rem;
+    border-radius: 0.45rem;
+    box-shadow: none !important;
+}
+
+    .conference-toggler:focus {
+        box-shadow: none;
+    }
+
+.conference-toggler-icon {
+    width: 24px;
+    height: 18px;
+    display: inline-flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+    .conference-toggler-icon span {
+        display: block;
+        height: 2.5px;
+        width: 100%;
+        background: var(--conference-blue);
+        border-radius: 999px;
+    }
+
+body {
+    padding-top: 96px;
+}
+.conference-link {
+    font-weight: 600;
+    font-size: 1.12rem;
+    color: var(--conference-blue) !important;
+    padding: 0.65rem 0.95rem !important;
+    transition: color 160ms ease, opacity 160ms ease;
+}
+
+    .conference-link:hover {
+        color: #163a69 !important;
+        opacity: 0.85;
+    }
+
+.conference-navbar .navbar-toggler {
+    border-color: rgba(0, 0, 0, 0.18);
+}
+
+    .conference-navbar .navbar-toggler:focus {
+        box-shadow: none;
+    }
+
+.conference-brand {
+    font-size: 1.2rem;
+    letter-spacing: 0.2px;
+    color: #111 !important;
+}
+
+.conference-link {
+    font-weight: 500;
+    color: #222 !important;
+    margin-left: 0.4rem;
+    margin-right: 0.4rem;
+    transition: color 160ms ease;
+}
+
+    .conference-link:hover {
+        color: #000 !important;
+    }
+
+.conference-footer {
+    background: #d6eef8;
+    border-top: 1px solid rgba(31, 78, 140, 0.12);
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+html, body {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    padding-top: 96px;
+}
+
+main {
+    margin-bottom: 0;
+}
+
+.conference-footer-container {
+    padding-top: 3.25rem;
+    padding-bottom: 3.25rem;
+}
+
+.conference-footer-title {
+    font-size: 1.9rem;
+    font-weight: 700;
+    color: var(--conference-blue);
+    margin-bottom: 1.4rem;
+}
+
+.conference-footer-subtitle {
+    font-size: 1.45rem;
+    font-weight: 700;
+    color: var(--conference-blue);
+    margin-bottom: 1.1rem;
+}
+
+.conference-footer-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 0.8rem;
+    margin-bottom: 1rem;
+    color: #4f6785;
+    font-size: 1.08rem;
+    line-height: 1.6;
+}
+
+.conference-footer-icon {
+    color: #d4a017;
+    font-weight: 700;
+    min-width: 1rem;
+    margin-top: 0.1rem;
+}
+
+.conference-footer-text {
+    color: #4f6785;
+    font-size: 1.08rem;
+    line-height: 1.65;
+    margin-bottom: 0.75rem;
+}
+
+.conference-footer-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.conference-footer-link {
+    color: #4f6785;
+    text-decoration: none;
+    font-size: 1.02rem;
+    transition: color 160ms ease;
+}
+
+    .conference-footer-link:hover {
+        color: var(--conference-blue);
+        text-decoration: underline;
+    }
+/* titluri generale */
+h1, h2, h3, h4, h5, h6 {
+    color: var(--conference-blue);
+}
+
+/* p?streaz? linkurile din navbar în culoarea lor proprie */
+.conference-navbar .nav-link {
+    color: var(--conference-blue) !important;
+}
+
+.hero-title,
+.theme-title,
+.org-name,
+.conference-footer-title,
+.h1, .h2, .h3, .h4, .h5, .h6 {
+    color: var(--conference-blue) !important;
+}
+
+@media (min-width: 992px) {
+    body {
+        font-size: 1.18rem;
+    }
+
+    h1, .h1 {
+        font-size: 3.6rem;
+    }
+
+    h2, .h2 {
+        font-size: 2.6rem;
+    }
+
+    h3, .h3 {
+        font-size: 2rem;
+    }
+
+    h4, .h4 {
+        font-size: 1.55rem;
+    }
+
+    .conference-link {
+        font-size: 1.3rem;
+    }
+
+    .hero-title {
+        font-size: 4rem;
+    }
+
+    .hero-subtitle,
+    .text-secondary,
+    p,
+    li {
+        font-size: 1.18rem;
+        line-height: 1.7;
+    }
+
+    .theme-title,
+    .org-name,
+    .conference-footer-title {
+        font-size: 1.35rem;
+    }
+
+    .org-role,
+    .conference-footer-text {
+        font-size: 1.08rem;
+    }
+}
+
+.conference-footer-social {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.65rem;
+    color: #4f6785;
+    text-decoration: none;
+    font-size: 1.08rem;
+    transition: color 160ms ease;
+}
+
+    .conference-footer-social:hover {
+        color: var(--conference-blue);
+        text-decoration: none;
+    }
+
+.conference-social-icon {
+    font-size: 1.4rem;
+    color: #1877f2;
+    line-height: 1;
+}
+
+@media (max-width: 991.98px) {
+    .conference-navbar {
+        min-height: 72px;
+        padding-top: 0.55rem;
+        padding-bottom: 0.55rem;
+    }
+
+    body {
+        padding-top: 72px;
+    }
+
+    .conference-navbar-inner {
+        justify-content: space-between;
+    }
+
+    .conference-mobile-brand {
+        display: inline-block;
+    }
+
+    .conference-navbar .navbar-collapse {
+        margin-top: 0.9rem;
+        background: rgba(255, 255, 255, 0.22);
+        border-radius: 0.9rem;
+        padding: 0.75rem 0.5rem;
+    }
+
+    .conference-navbar .navbar-nav {
+        gap: 0;
+        align-items: stretch !important;
+    }
+
+    .conference-link {
+        display: block;
+        text-align: center;
+        font-size: 1.08rem;
+        padding: 0.8rem 1rem !important;
+    }
 }

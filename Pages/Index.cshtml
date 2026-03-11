@@ -11,16 +11,18 @@
             <div class="row justify-content-center">
                 <div class="col-12 col-xl-10">
                     <div class="text-center py-5 py-lg-6">
-                        <h1 class="hero-title mb-3">CAS–ANSO Conference</h1>
+                        <div class="hero-content-panel mx-auto">
+                            <h1 class="hero-title mb-3">CAS–ANSO Conference</h1>
 
-                        <p class="hero-subtitle mb-4 mx-auto" style="max-width: 52rem;">
-                            A scientific conference dedicated to research exchange, interdisciplinary dialogue,
-                            and international cooperation.
-                        </p>
+                            <p class="hero-subtitle mb-4 mx-auto" style="max-width: 52rem;">
+                                A scientific conference dedicated to research exchange, interdisciplinary dialogue,
+                                and international cooperation.
+                            </p>
 
-                        <div class="d-flex justify-content-center gap-2 flex-wrap">
-                            <a class="btn btn-outline-dark btn-lg" asp-page="/Conference/Program">Program</a>
-                            <a class="btn btn-dark btn-lg" asp-page="/Conference/Registration">Registration</a>
+                            <div class="d-flex justify-content-center gap-2 flex-wrap">
+                                <a class="btn btn-outline-dark btn-lg" asp-page="/Conference/Program">Program</a>
+                                <a class="btn btn-dark btn-lg" asp-page="/Conference/Registration">Registration</a>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -189,7 +191,7 @@
     .hero-overlay {
         position: absolute;
         inset: 0;
-        background: linear-gradient( to bottom, rgba(255,255,255,0.55), rgba(255,255,255,0.70) );
+        background: linear-gradient( to bottom, rgba(255,255,255,0.30), rgba(255,255,255,0.45) );
         pointer-events: none;
         display: block;
     }
@@ -198,6 +200,17 @@
     .hero-academic .container {
         position: relative;
         z-index: 1;
+    }
+
+    .hero-content-panel {
+        max-width: 900px;
+        padding: 2rem 2.25rem;
+        border-radius: 36px;
+        background: rgba(255, 255, 255, 0.10);
+        backdrop-filter: blur(22px);
+        -webkit-backdrop-filter: blur(22px);
+        border: none;
+        box-shadow: none;
     }
 </style>
 
