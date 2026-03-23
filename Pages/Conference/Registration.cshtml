@@ -1,0 +1,305 @@
+﻿@page
+@model ConferenceSite.Pages.Conference.RegistrationModel
+@{
+    ViewData["Title"] = "Registration";
+}
+
+<style>
+    .registration-wrapper {
+        background: #f3f6f8;
+        padding: 48px 20px 80px;
+    }
+
+    .registration-container {
+        max-width: 1280px;
+        margin: 0 auto;
+    }
+
+    .registration-header {
+        text-align: center;
+        margin-bottom: 40px;
+    }
+
+        .registration-header h1 {
+            margin: 0 0 10px;
+            font-size: 3rem;
+            line-height: 1.1;
+            font-weight: 800;
+            color: #1e4f91;
+            letter-spacing: -0.02em;
+        }
+
+        .registration-header p {
+            margin: 0;
+            font-size: 1.2rem;
+            color: #5d7696;
+            line-height: 1.6;
+        }
+
+    .registration-intro {
+        background: #dfeaf1;
+        border: 1px solid #d3e1ea;
+        border-radius: 24px;
+        padding: 28px 30px;
+        margin-bottom: 28px;
+        box-shadow: 0 8px 24px rgba(30, 79, 145, 0.05);
+    }
+
+        .registration-intro h2 {
+            margin: 0 0 10px;
+            font-size: 1.45rem;
+            font-weight: 800;
+            color: #1e4f91;
+        }
+
+        .registration-intro p {
+            margin: 0;
+            font-size: 1.02rem;
+            line-height: 1.8;
+            color: #294768;
+        }
+
+    .registration-cards {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 22px;
+        margin-bottom: 42px;
+    }
+
+    .registration-card {
+        background: #dfeaf1;
+        border: 1px solid #d3e1ea;
+        border-radius: 22px;
+        overflow: hidden;
+        box-shadow: 0 8px 24px rgba(30, 79, 145, 0.05);
+    }
+
+    .registration-card-header {
+        padding: 18px 20px 14px;
+        border-bottom: 1px solid #d3e1ea;
+        background: #d9e7ef;
+    }
+
+        .registration-card-header span {
+            display: inline-block;
+            margin-bottom: 6px;
+            font-size: 0.95rem;
+            font-weight: 800;
+            text-transform: uppercase;
+            letter-spacing: 0.04em;
+            color: #c58a00;
+        }
+
+        .registration-card-header h3 {
+            margin: 0;
+            font-size: 1.35rem;
+            line-height: 1.35;
+            font-weight: 800;
+            color: #1e4f91;
+        }
+
+    .registration-card-body {
+        background: #f8fbfd;
+        padding: 18px 20px 20px;
+        min-height: 180px;
+    }
+
+        .registration-card-body p,
+        .registration-card-body li {
+            margin: 0;
+            font-size: 1rem;
+            line-height: 1.8;
+            color: #294768;
+        }
+
+        .registration-card-body ul {
+            margin: 0;
+            padding-left: 18px;
+        }
+
+    .registration-form-section {
+        margin-top: 8px;
+    }
+
+    .registration-form-title {
+        text-align: center;
+        margin-bottom: 26px;
+    }
+
+        .registration-form-title h2 {
+            margin: 0 0 8px;
+            font-size: 2.3rem;
+            line-height: 1.2;
+            font-weight: 800;
+            color: #1e4f91;
+        }
+
+        .registration-form-title p {
+            margin: 0;
+            font-size: 1.05rem;
+            color: #5d7696;
+            line-height: 1.7;
+        }
+
+    /* cheia: fara cutie vizibila in jurul form-ului */
+    .registration-form-shell {
+        width: 100%;
+        max-width: 1180px;
+        margin: 0 auto;
+        padding: 0;
+        background: transparent;
+        border: none;
+        box-shadow: none;
+        border-radius: 0;
+    }
+
+        .registration-form-shell iframe {
+            display: block;
+            width: 100%;
+            height: 1380px;
+            border: none;
+            border-radius: 18px;
+            background: transparent;
+        }
+
+    .registration-form-note {
+        max-width: 980px;
+        margin: 16px auto 0;
+        text-align: center;
+        font-size: 0.95rem;
+        line-height: 1.7;
+        color: #6d8098;
+    }
+
+    @@media (max-width: 992px) {
+        .registration-cards {
+            grid-template-columns: 1fr;
+        }
+
+        .registration-header h1 {
+            font-size: 2.4rem;
+        }
+
+        .registration-form-title h2 {
+            font-size: 1.95rem;
+        }
+
+        .registration-form-shell {
+            max-width: 100%;
+        }
+
+            .registration-form-shell iframe {
+                height: 1450px;
+            }
+    }
+
+    @@media (max-width: 576px) {
+        .registration-wrapper {
+            padding: 36px 14px 60px;
+        }
+
+        .registration-header h1 {
+            font-size: 2rem;
+        }
+
+        .registration-header p {
+            font-size: 1.02rem;
+        }
+
+        .registration-intro,
+        .registration-card-header,
+        .registration-card-body {
+            padding-left: 16px;
+            padding-right: 16px;
+        }
+
+        .registration-form-title h2 {
+            font-size: 1.7rem;
+        }
+
+        .registration-form-shell iframe {
+            height: 1500px;
+            border-radius: 14px;
+        }
+    }
+</style>
+
+<div class="registration-wrapper">
+    <div class="registration-container">
+
+        <section class="registration-header">
+            <h1>Registration</h1>
+            <p>23–25 September 2026 · Bucharest, Romanian Academy</p>
+        </section>
+
+        <section class="registration-intro">
+            <h2>Conference participation</h2>
+            <p>
+                We invite researchers, students, speakers, institutional representatives, and partners
+                to register for the conference using the online form below. The submitted information
+                will support communication with participants and the overall organization of the event.
+            </p>
+        </section>
+
+        <section class="registration-cards">
+            <article class="registration-card">
+                <div class="registration-card-header">
+                    <span>Info</span>
+                    <h3>Who can register</h3>
+                </div>
+                <div class="registration-card-body">
+                    <p>
+                        Registration is open to participants attending the conference sessions,
+                        poster activities, invited talks, and related scientific and networking events.
+                    </p>
+                </div>
+            </article>
+
+            <article class="registration-card">
+                <div class="registration-card-header">
+                    <span>Details</span>
+                    <h3>Before you submit</h3>
+                </div>
+                <div class="registration-card-body">
+                    <ul>
+                        <li>Please complete all required fields in the form.</li>
+                        <li>Use an active email address for future communication.</li>
+                        <li>Make sure the affiliation and participation details are correct.</li>
+                    </ul>
+                </div>
+            </article>
+
+            <article class="registration-card">
+                <div class="registration-card-header">
+                    <span>Support</span>
+                    <h3>Need assistance?</h3>
+                </div>
+                <div class="registration-card-body">
+                    <p>
+                        For questions related to registration or participation, please use the conference
+                        contact details available on the Contact page of the website.
+                    </p>
+                </div>
+            </article>
+        </section>
+
+        <section class="registration-form-section">
+            <div class="registration-form-title">
+                <h2>Online registration form</h2>
+                <p>Please complete the form below to confirm your participation.</p>
+            </div>
+
+            <div class="registration-form-shell">
+                <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSdC5YLkdVgLJTrgdwNtCJrXCWR0JhDgVyIkrywrykCqfKdNxg/viewform?embedded=true"
+                        loading="lazy">
+                    Loading…
+                </iframe>
+            </div>
+
+            <div class="registration-form-note">
+                The registration form is embedded directly on this page for easier access and submission.
+            </div>
+        </section>
+
+    </div>
+</div>
