@@ -1,0 +1,154 @@
+﻿@page
+@model ConferenceSite.Pages.Conference.PostersModel
+@{
+    ViewData["Title"] = "ROMPHYSCHEM Posters";
+}
+
+<style>
+    .posters-wrapper {
+        background: #f3f6f8;
+        padding: 48px 20px 80px;
+    }
+
+    .posters-container {
+        max-width: 980px;
+        margin: 0 auto;
+    }
+
+    .posters-header {
+        text-align: center;
+        margin-bottom: 34px;
+    }
+
+        .posters-header h1 {
+            margin: 0 0 10px;
+            font-size: 2.6rem;
+            font-weight: 800;
+            color: #1e4f91;
+            letter-spacing: -0.02em;
+        }
+
+        .posters-header p {
+            margin: 0;
+            font-size: 1.1rem;
+            color: #5d7696;
+        }
+
+    .posters-section {
+        margin-bottom: 36px;
+    }
+
+        .posters-section h2 {
+            margin: 0 0 12px;
+            font-size: 1.5rem;
+            font-weight: 800;
+            color: #1e4f91;
+        }
+
+        .posters-section h3 {
+            margin: 20px 0 8px;
+            font-size: 1.2rem;
+            font-weight: 700;
+            color: #1e4f91;
+        }
+
+        .posters-section p {
+            margin: 0 0 14px;
+            font-size: 1.02rem;
+            line-height: 1.8;
+            color: #294768;
+        }
+
+        .posters-section ul,
+        .posters-section ol {
+            margin: 0 0 14px;
+            padding-left: 22px;
+        }
+
+        .posters-section li {
+            margin-bottom: 8px;
+            font-size: 1rem;
+            line-height: 1.8;
+            color: #294768;
+        }
+
+        .posters-section strong {
+            color: #1e4f91;
+        }
+
+    .posters-divider {
+        margin: 40px 0;
+        border: none;
+        border-top: 1px solid #d3e1ea;
+    }
+
+    @@media (max-width: 768px) {
+        .posters-wrapper {
+            padding: 36px 16px 60px;
+        }
+
+        .posters-header h1 {
+            font-size: 2rem;
+        }
+
+        .posters-header p {
+            font-size: 1rem;
+        }
+    }
+</style>
+
+<div class="posters-wrapper">
+    <div class="posters-container">
+
+        <section class="posters-header">
+            <h1>ROMPHYSCHEM Posters</h1>
+            <p>23–25 September 2026 · Bucharest, Romanian Academy</p>
+        </section>
+
+        <section class="posters-section">
+            <h2>ROMPHYSCHEM 18</h2>
+
+            <h3>What the poster track is</h3>
+            <p>
+                The poster track is an integral part of the conference and provides participants
+                with the opportunity to present research results, ongoing work, experimental findings,
+                and interdisciplinary approaches in a format that encourages direct interaction
+                and discussion.
+            </p>
+
+            <h3>Who it addresses</h3>
+            <p>
+                The poster sessions are open to researchers, doctoral candidates, students,
+                early-career scientists, and experienced academics interested in presenting their
+                work and engaging with the broader scientific community.
+            </p>
+
+            <h3>How it integrates within the conference</h3>
+            <p>
+                Poster presentations are integrated into the conference programme through dedicated
+                sessions and interactive discussion intervals. These complement plenary and thematic
+                sessions by creating opportunities for focused scientific exchange and networking.
+            </p>
+        </section>
+
+        <hr class="posters-divider" />
+
+        <section class="posters-section">
+            <h2>Call for posters or abstracts</h2>
+
+            <p>
+                Contributors are invited to submit poster abstracts in accordance with the guidelines below.
+            </p>
+
+            <ol>
+                <li><strong>Format</strong> – abstracts should follow the official conference structure.</li>
+                <li><strong>Dimensions</strong> – poster size and layout requirements will be specified by the organizers.</li>
+                <li><strong>Template</strong> – a submission template will be provided.</li>
+                <li><strong>Deadline</strong> – submissions must respect the official conference deadline.</li>
+                <li><strong>Criteria</strong> – evaluation will consider relevance, clarity, and scientific quality.</li>
+                <li><strong>Poster Sessions</strong> – accepted posters will be assigned to dedicated sessions.</li>
+            </ol>
+        </section>
+
+    </div>
+</div>
