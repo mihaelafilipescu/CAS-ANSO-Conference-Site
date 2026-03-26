@@ -1,0 +1,155 @@
+﻿@page
+@model ConferenceSite.Pages.Conference.CommitteeModel
+@{
+    ViewData["Title"] = "Committee";
+}
+
+<style>
+    .committee-wrapper {
+        background: #f3f6f8;
+        padding: 48px 20px 80px;
+    }
+
+    .committee-container {
+        max-width: 980px;
+        margin: 0 auto;
+    }
+
+    .committee-header {
+        text-align: center;
+        margin-bottom: 34px;
+    }
+
+        .committee-header h1 {
+            margin: 0 0 10px;
+            font-size: 2.6rem;
+            font-weight: 800;
+            color: #1e4f91;
+            letter-spacing: -0.02em;
+        }
+
+        .committee-header p {
+            margin: 0;
+            font-size: 1.1rem;
+            color: #5d7696;
+            line-height: 1.6;
+        }
+
+    .committee-section {
+        margin-bottom: 38px;
+    }
+
+        .committee-section h2 {
+            margin: 0 0 14px;
+            font-size: 1.85rem;
+            font-weight: 800;
+            color: #1e4f91;
+            line-height: 1.3;
+        }
+
+        .committee-section p {
+            margin: 0 0 14px;
+            font-size: 1.02rem;
+            line-height: 1.8;
+            color: #294768;
+        }
+
+        .committee-section ul {
+            margin: 0;
+            padding-left: 30px;
+        }
+
+        .committee-section li {
+            margin-bottom: 10px;
+            font-size: 1rem;
+            line-height: 1.8;
+            color: #294768;
+        }
+
+        .committee-section strong {
+            color: #1e4f91;
+        }
+
+    .committee-divider {
+        margin: 34px 0 38px;
+        border: none;
+        border-top: 1px solid #d3e1ea;
+    }
+
+    @@media (max-width: 768px) {
+        .committee-wrapper {
+            padding: 36px 16px 60px;
+        }
+
+        .committee-header h1 {
+            font-size: 2rem;
+        }
+
+        .committee-header p {
+            font-size: 1rem;
+        }
+
+        .committee-section h2 {
+            font-size: 1.5rem;
+        }
+
+        .committee-section ul {
+            padding-left: 22px;
+        }
+    }
+</style>
+
+<div class="committee-wrapper">
+    <div class="committee-container">
+
+        <section class="committee-header">
+            <h1>Committees</h1>
+            <p>23–25 September 2026 · Bucharest, Romanian Academy</p>
+        </section>
+
+        <section class="committee-section">
+            <h2>Symposium Chair</h2>
+            <ul>
+                <li>Felipe Conzuelo (Institute of Chemical and Biological Technology António Xavier, Nova University Lisbon, Portugal)</li>
+            </ul>
+        </section>
+
+        <hr class="committee-divider" />
+
+        <section class="committee-section">
+            <h2>Local Organizing Committee</h2>
+            <ul>
+                <li>Ana Viana (Faculty of Sciences, University of Lisbon, Portugal)</li>
+                <li>Jorge Correia (Faculty of Sciences, University of Lisbon, Portugal)</li>
+                <li>Gabriela Almeida (Egas Moniz School of Health and Science and UCIBIO-i4HB, Nova School of Science and Technology, Nova University Lisbon, Portugal)</li>
+                <li>Július Gajdár (UCIBIO, Nova School of Science and Technology, Nova University Lisbon, Portugal)</li>
+                <li>Ana Baptista (Nova School of Science and Technology, Nova University Lisbon, Portugal)</li>
+                <li>Ricardo Leote (Institute of Chemical and Biological Technology António Xavier, Nova University Lisbon, Portugal)</li>
+            </ul>
+        </section>
+
+        <hr class="committee-divider" />
+
+        <section class="committee-section">
+            <h2>Scientific Committee</h2>
+            <ul>
+                <li>Serena Arnaboldi (University of Milan, Italy)</li>
+                <li>Damien Arrigan (Curtin University, Australia)</li>
+                <li>Jiří Barek (Charles University, Czech Republic)</li>
+                <li>Christopher Brett (University of Coimbra, Portugal)</li>
+                <li>Susana Campuzano (Complutense University of Madrid, Spain)</li>
+                <li>Stefano Cinti (University of Naples Federico II, Italy)</li>
+                <li>Maria Cuartero (KTH Royal Institute of Technology, Sweden)</li>
+                <li>Anne de Poulpiquet (Aix-Marseille University, France)</li>
+                <li>Luís Moreira Gonçalves (Nova University Lisbon, Portugal)</li>
+                <li>Andrei Ioniță (Romanian Academy, Romania)</li>
+                <li>Monika Kalcher (Graz University of Technology, Austria)</li>
+                <li>Marcela Mihailciuc (University of Bucharest, Romania)</li>
+                <li>Radu Silaghi-Dumitrescu (Babeș-Bolyai University, Romania)</li>
+                <li>Sónia Sousa (University of Porto, Portugal)</li>
+                <li>Florin Stanciu (National Institute for Research and Development, Romania)</li>
+            </ul>
+        </section>
+
+    </div>
+</div>
