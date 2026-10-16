@@ -3,7 +3,7 @@
 Official website for the **CAS-ANSO Scientific Conference 2026**, held in Bucharest, Romania. 
 
 ## About the Event
-The conference was organized by the **“Ilie Murgulescu” Institute of Physical Chemistry (ICF)** of the **Romanian Academy**. It served as a collaborative platform for researchers, scientists, and academics to share findings and discuss advancements in science.
+The conference was organized by the **“Ilie Murgulescu” Institute of Physical Chemistry (ICF)** of the **Romanian Academy** with **ANSO** support. It served as a collaborative platform for researchers, scientists, and academics to share findings and discuss advancements in science.
 
 ## Tech Stack
 * **Framework:** ASP.NET Core
